@@ -74,6 +74,94 @@ ESP32-HARNESS transforms the ESP32 into a portable, self-contained security rese
 └─────────────────────────────────────────────┘
 ```
 
+### Hardware Architecture
+
+```mermaid
+graph TB
+    ESP[ESP32-WROOM-32 Core]
+
+    subgraph Wireless["Wireless Interfaces"]
+        WiFi[Wi-Fi 802.11]
+        BLE[BLE 5.0]
+        RF24[NRF24L01+ PA/LNA]
+    end
+
+    subgraph Modules["Function Modules"]
+        Scan[Wi-Fi Scanning]
+        Capture[Packet Capture]
+        Deauth[Deauth Detection]
+        RF_Spec[Spectrum Analysis]
+        RF_Inj[Packet Injection]
+        BLE_Scan[BLE Enumeration]
+        Tel[MQTT/HTTP Telemetry]
+    end
+
+    subgraph Storage["Storage & Output"]
+        SD[MicroSD Card]
+        SPIFFS[SPIFFS Flash]
+        OLED[OLED Display]
+        GPIO[GPIO Triggers]
+        Serial[Serial Output]
+    end
+
+    ESP --> WiFi & BLE & RF24
+    WiFi --> Scan & Capture & Deauth
+    RF24 --> RF_Spec & RF_Inj
+    BLE --> BLE_Scan
+    Scan & Capture & Deauth & RF_Spec & RF_Inj & BLE_Scan --> Tel
+    Tel --> SD & SPIFFS & OLED & GPIO & Serial
+```
+
+### Firmware Module Dependencies
+
+```mermaid
+graph LR
+    CLI[CLI Interface] --> Core[Core Framework]
+    PCAP[PCAP Engine] --> Core
+    Logger[Logger] --> Core
+    Config[Configuration] --> Core
+
+    Core --> HAL[HAL - ESP-IDF / Arduino]
+
+    WiFiEngine[Wi-Fi Engine] --> Core
+    RF24Engine[RF24 Engine] --> Core
+    BLEEngine[BLE Engine] --> Core
+    Telemetry[Telemetry Output] --> Core
+
+    WiFiEngine --> HAL
+    RF24Engine --> HAL
+    BLEEngine --> HAL
+    PCAP --> HAL
+```
+
+### Usage Flowchart
+
+```mermaid
+flowchart TD
+    A[Power On ESP32] --> B[Boot Firmware]
+    B --> C[Load Config]
+    C --> D{Select Mode}
+
+    D -->|Wi-Fi| E[Scan Networks]
+    E --> F[Select Target]
+    F --> G[Capture Packets]
+    G --> H[Save PCAP to SD]
+
+    D -->|RF24| I[Init NRF24L01+]
+    I --> J[Spectrum Analysis]
+    J --> K[Inject Test Packets]
+
+    D -->|BLE| L[Scan BLE Devices]
+    L --> M[Enumerate Advertisements]
+    M --> N[Log Results]
+
+    D -->|Telemetry| O[Start MQTT/HTTP]
+    O --> P[Stream Telemetry Data]
+    P --> Q[Dashboard Monitoring]
+
+    H & K & N & Q --> R[Export Data to PC]
+```
+
 ## Roadmap
 
 - [ ] **Phase 1** — Core framework, CLI interface, Wi-Fi scanning
