@@ -349,16 +349,16 @@ def build_logo():
     <circle cx="580" cy="120" r="3" fill="#00d4ff" opacity="0.3"/>
   </g>
   <!-- Main text -->
-  <text x="30" y="80" font-family="'Courier New',monospace" font-size="48" font-weight="bold" fill="#00d4ff" filter="url(#glow)">ESP32</text>
-  <text x="230" y="80" font-family="'Courier New',monospace" font-size="48" font-weight="bold" fill="#e8e8ed">-HARNESS</text>
+  <text x="30" y="80" font-family="'Share Tech Mono',monospace" font-size="48" font-weight="bold" fill="#00d4ff" filter="url(#glow)">ESP32</text>
+  <text x="230" y="80" font-family="'Share Tech Mono',monospace" font-size="48" font-weight="bold" fill="#e8e8ed">-HARNESS</text>
   <!-- Accent line -->
   <rect x="30" y="95" width="60" height="2" rx="1" fill="#00d4ff"/>
   <!-- Subtitle -->
-  <text x="30" y="120" font-family="'Courier New',monospace" font-size="12" fill="#6b6b7b" letter-spacing="3">PENTESTING  AUDIT  TELEMETRY</text>
+  <text x="30" y="120" font-family="'Share Tech Mono',monospace" font-size="12" fill="#6b6b7b" letter-spacing="3">PENTESTING  AUDIT  TELEMETRY</text>
   <!-- Version + license -->
-  <text x="30" y="150" font-family="'Courier New',monospace" font-size="10" fill="#6b6b7b">v1.0</text>
-  <text x="80" y="150" font-family="'Courier New',monospace" font-size="10" fill="#28c840">MIT</text>
-  <text x="120" y="150" font-family="'Courier New',monospace" font-size="10" fill="#6b6b7b">ESP32-WROOM-32</text>
+  <text x="30" y="150" font-family="'Share Tech Mono',monospace" font-size="10" fill="#6b6b7b">v1.0</text>
+  <text x="80" y="150" font-family="'Share Tech Mono',monospace" font-size="10" fill="#28c840">MIT</text>
+  <text x="120" y="150" font-family="'Share Tech Mono',monospace" font-size="10" fill="#6b6b7b">ESP32-WROOM-32</text>
 </svg>"""
     path = os.path.join(ASSETS, "esp32-harness-logo.svg")
     with open(path, "w") as f:
@@ -407,18 +407,18 @@ def build_og():
     <circle cx="1100" cy="420" r="4" fill="#00d4ff" opacity="0.3"/>
   </g>
   <!-- Title -->
-  <text x="80" y="220" font-family="'Courier New',monospace" font-size="96" font-weight="bold" fill="#00d4ff" filter="url(#glow)">ESP32</text>
-  <text x="480" y="220" font-family="'Courier New',monospace" font-size="96" font-weight="bold" fill="#e8e8ed">-HARNESS</text>
+  <text x="80" y="220" font-family="'Share Tech Mono',monospace" font-size="96" font-weight="bold" fill="#00d4ff" filter="url(#glow)">ESP32</text>
+  <text x="480" y="220" font-family="'Share Tech Mono',monospace" font-size="96" font-weight="bold" fill="#e8e8ed">-HARNESS</text>
   <!-- Accent bar -->
   <rect x="80" y="245" width="100" height="4" rx="2" fill="#00d4ff"/>
   <!-- Subtitle -->
-  <text x="80" y="290" font-family="'Courier New',monospace" font-size="22" fill="#6b6b7b" letter-spacing="4">PENTESTING, AUDIT &amp; TELEMETRY FIRMWARE</text>
+  <text x="80" y="290" font-family="'Share Tech Mono',monospace" font-size="22" fill="#6b6b7b" letter-spacing="4">PENTESTING, AUDIT &amp; TELEMETRY FIRMWARE</text>
   <!-- Features line -->
-  <text x="80" y="340" font-family="'Courier New',monospace" font-size="16" fill="#6b6b7b">2.4 GHz Research  |  NRF24L01+  |  BLE 5.0  |  Forensic Capture</text>
+  <text x="80" y="340" font-family="'Share Tech Mono',monospace" font-size="16" fill="#6b6b7b">2.4 GHz Research  |  NRF24L01+  |  BLE 5.0  |  Forensic Capture</text>
   <!-- GitHub -->
-  <text x="80" y="400" font-family="'Courier New',monospace" font-size="18" fill="#28c840">github.com/ykrishhh/ESP32-HARNESS</text>
+  <text x="80" y="400" font-family="'Share Tech Mono',monospace" font-size="18" fill="#28c840">github.com/ykrishhh/ESP32-HARNESS</text>
   <!-- Bottom bar -->
-  <text x="80" y="520" font-family="'Courier New',monospace" font-size="14" fill="#6b6b7b">ESP32-WROOM-32  |  MIT License  |  Open Source</text>
+  <text x="80" y="520" font-family="'Share Tech Mono',monospace" font-size="14" fill="#6b6b7b">ESP32-WROOM-32  |  MIT License  |  Open Source</text>
   <rect x="80" y="540" width="80" height="3" rx="1" fill="#00d4ff" opacity="0.5"/>
 </svg>"""
     path = os.path.join(ASSETS, "og-image.svg")
@@ -452,20 +452,20 @@ def build_banner():
     <circle cx="740" cy="110" r="3" fill="#00d4ff" opacity="0.3"/>
   </g>
   <!-- Title -->
-  <text x="40" y="100" font-family="'Courier New',monospace" font-size="42" font-weight="bold" fill="#00d4ff" filter="url(#glow2)">ESP32</text>
-  <text x="210" y="100" font-family="'Courier New',monospace" font-size="42" font-weight="bold" fill="#e8e8ed">-HARNESS</text>
+  <text x="40" y="100" font-family="'Share Tech Mono',monospace" font-size="42" font-weight="bold" fill="#00d4ff" filter="url(#glow2)">ESP32</text>
+  <text x="210" y="100" font-family="'Share Tech Mono',monospace" font-size="42" font-weight="bold" fill="#e8e8ed">-HARNESS</text>
   <!-- Accent -->
   <rect x="40" y="115" width="50" height="2" rx="1" fill="#00d4ff"/>
   <!-- Subtitle -->
-  <text x="40" y="145" font-family="'Courier New',monospace" font-size="12" fill="#6b6b7b" letter-spacing="2">PENTESTING &amp; TELEMETRY FIRMWARE</text>
+  <text x="40" y="145" font-family="'Share Tech Mono',monospace" font-size="12" fill="#6b6b7b" letter-spacing="2">PENTESTING &amp; TELEMETRY FIRMWARE</text>
   <!-- Stats -->
-  <text x="40" y="175" font-family="'Courier New',monospace" font-size="10" fill="#28c840">3 Radios</text>
-  <text x="130" y="175" font-family="'Courier New',monospace" font-size="10" fill="#6b6b7b">|</text>
-  <text x="150" y="175" font-family="'Courier New',monospace" font-size="10" fill="#28c840">7 Modes</text>
-  <text x="230" y="175" font-family="'Courier New',monospace" font-size="10" fill="#6b6b7b">|</text>
-  <text x="250" y="175" font-family="'Courier New',monospace" font-size="10" fill="#28c840">$5 Hardware</text>
-  <text x="370" y="175" font-family="'Courier New',monospace" font-size="10" fill="#6b6b7b">|</text>
-  <text x="390" y="175" font-family="'Courier New',monospace" font-size="10" fill="#28c840">MIT</text>
+  <text x="40" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#28c840">3 Radios</text>
+  <text x="130" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#6b6b7b">|</text>
+  <text x="150" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#28c840">7 Modes</text>
+  <text x="230" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#6b6b7b">|</text>
+  <text x="250" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#28c840">$5 Hardware</text>
+  <text x="370" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#6b6b7b">|</text>
+  <text x="390" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#28c840">MIT</text>
 </svg>"""
     path = os.path.join(ASSETS, "banner.svg")
     with open(path, "w") as f:

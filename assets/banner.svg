@@ -21,18 +21,18 @@
     <circle cx="740" cy="110" r="3" fill="#00d4ff" opacity="0.3"/>
   </g>
   <!-- Title -->
-  <text x="40" y="100" font-family="'Courier New',monospace" font-size="42" font-weight="bold" fill="#00d4ff" filter="url(#glow2)">ESP32</text>
-  <text x="210" y="100" font-family="'Courier New',monospace" font-size="42" font-weight="bold" fill="#e8e8ed">-HARNESS</text>
+  <text x="40" y="100" font-family="'Share Tech Mono',monospace" font-size="42" font-weight="bold" fill="#00d4ff" filter="url(#glow2)">ESP32</text>
+  <text x="210" y="100" font-family="'Share Tech Mono',monospace" font-size="42" font-weight="bold" fill="#e8e8ed">-HARNESS</text>
   <!-- Accent -->
   <rect x="40" y="115" width="50" height="2" rx="1" fill="#00d4ff"/>
   <!-- Subtitle -->
-  <text x="40" y="145" font-family="'Courier New',monospace" font-size="12" fill="#6b6b7b" letter-spacing="2">PENTESTING &amp; TELEMETRY FIRMWARE</text>
+  <text x="40" y="145" font-family="'Share Tech Mono',monospace" font-size="12" fill="#6b6b7b" letter-spacing="2">PENTESTING &amp; TELEMETRY FIRMWARE</text>
   <!-- Stats -->
-  <text x="40" y="175" font-family="'Courier New',monospace" font-size="10" fill="#28c840">3 Radios</text>
-  <text x="130" y="175" font-family="'Courier New',monospace" font-size="10" fill="#6b6b7b">|</text>
-  <text x="150" y="175" font-family="'Courier New',monospace" font-size="10" fill="#28c840">7 Modes</text>
-  <text x="230" y="175" font-family="'Courier New',monospace" font-size="10" fill="#6b6b7b">|</text>
-  <text x="250" y="175" font-family="'Courier New',monospace" font-size="10" fill="#28c840">$5 Hardware</text>
-  <text x="370" y="175" font-family="'Courier New',monospace" font-size="10" fill="#6b6b7b">|</text>
-  <text x="390" y="175" font-family="'Courier New',monospace" font-size="10" fill="#28c840">MIT</text>
+  <text x="40" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#28c840">3 Radios</text>
+  <text x="130" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#6b6b7b">|</text>
+  <text x="150" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#28c840">7 Modes</text>
+  <text x="230" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#6b6b7b">|</text>
+  <text x="250" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#28c840">$5 Hardware</text>
+  <text x="370" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#6b6b7b">|</text>
+  <text x="390" y="175" font-family="'Share Tech Mono',monospace" font-size="10" fill="#28c840">MIT</text>
 </svg>

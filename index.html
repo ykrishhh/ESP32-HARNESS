@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ESP32-HARNESS | Pentesting & Telemetry Firmware</title>
-<meta name="description" content="Advanced ESP32 pentesting firmware for 2.4 GHz research, RF24 experimentation, and on-device forensic capture.">
+<meta name="description" content="Advanced ESP32 pentesting firmware for 2.4 GHz research, NRF24 experimentation, and on-device forensic capture.">
+<meta property="og:title" content="ESP32-HARNESS | Pentesting & Telemetry Firmware">
+<meta property="og:description" content="Pentesting, audit, and telemetry firmware for the ESP32. Three radios, seven modes, open source.">
+<meta property="og:image" content="https://raw.githubusercontent.com/ykrishhh/ESP32-HARNESS/main/assets/og-image.svg">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -21,7 +25,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links a:hover{color:var(--accent)}
 .nav-cta{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:.5rem 1.2rem;border:none;cursor:pointer;text-decoration:none;transition:opacity .2s}
 .nav-cta:hover{opacity:.85}
-.hero{min-height:100dvh;display:grid;grid-template-columns:1.2fr 1fr;gap:0;padding:0 clamp(1.5rem,4vw,3rem);padding-top:100px;align-items:center;position:relative;overflow:hidden}
+.hero{min-height:100dvh;display:grid;grid-template-columns:1.2fr 1fr;gap:0;padding:0 clamp(1.5rem,4vw,3rem);padding-top:96px;align-items:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:0;left:60%;width:1px;height:100%;background:linear-gradient(180deg,transparent,var(--border) 30%,var(--border) 70%,transparent)}
 .hero-content{padding-right:clamp(2rem,5vw,6rem)}
 .hero-eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
@@ -94,8 +98,8 @@ footer{padding:2rem clamp(1.5rem,4vw,3rem);border-top:1px solid var(--border);di
 .footer-links a:hover{color:var(--accent)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:100px;padding-bottom:3rem}.hero::before{display:none}.hero-content{padding-right:0}.hero-visual{margin-top:2rem}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.bento-cell.span-8,.bento-cell.span-4,.bento-cell.span-6{grid-column:span 12}.nav-links{display:none}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.terminal-cursor{animation:none}}
+@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:96px;padding-bottom:3rem}.hero::before{display:none}.hero-content{padding-right:0}.hero-visual{margin-top:2rem}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.bento-cell.span-8,.bento-cell.span-4,.bento-cell.span-6{grid-column:span 12}.nav-links{display:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.terminal-cursor{animation:none;opacity:1}}
 </style>
 </head>
 <body>
@@ -112,7 +116,7 @@ footer{padding:2rem clamp(1.5rem,4vw,3rem);border-top:1px solid var(--border);di
   <div class="hero-content">
     <div class="hero-eyebrow">ESP32-WROOM-32</div>
     <h1>ESP32<span>-</span>HARNESS</h1>
-    <p class="hero-sub">Pentesting, audit, and telemetry firmware for the ESP32. 2.4 GHz research, NRF24L01+ experimentation, and on-device forensic capture running on a single microcontroller.</p>
+    <p class="hero-sub">Pentesting and telemetry firmware for the ESP32. Three radios, seven modes, on-device forensic capture.</p>
     <div class="hero-actions">
       <a href="https://github.com/ykrishhh/ESP32-HARNESS" class="btn-primary" target="_blank" rel="noopener">Clone & Flash</a>
       <a href="#features" class="btn-secondary">See Features</a>
@@ -146,7 +150,6 @@ footer{padding:2rem clamp(1.5rem,4vw,3rem);border-top:1px solid var(--border);di
   <div class="stat reveal"><div class="stat-value">MIT</div><div class="stat-label">License</div></div>
 </div>
 <section class="features" id="features">
-  <div class="section-label reveal">Engine Modules</div>
   <h2 class="section-title reveal">Built-in capabilities</h2>
   <div class="bento">
     <div class="bento-cell span-8 featured reveal">
@@ -194,7 +197,6 @@ footer{padding:2rem clamp(1.5rem,4vw,3rem);border-top:1px solid var(--border);di
   </div>
 </section>
 <section class="arch" id="architecture">
-  <div class="section-label reveal">System Design</div>
   <h2 class="section-title reveal">Architecture</h2>
   <div class="arch-grid">
     <div class="arch-block highlight reveal"><div class="arch-block-name">ESP32-WROOM-32</div><div class="arch-block-desc">Main controller</div></div>
@@ -209,8 +211,7 @@ footer{padding:2rem clamp(1.5rem,4vw,3rem);border-top:1px solid var(--border);di
   </div>
 </section>
 <section class="specs" id="specs">
-  <div class="section-label reveal">Bill of Materials</div>
-  <h2 class="section-title reveal">Hardware Requirements</h2>
+  <h2 class="section-title reveal">Hardware requirements</h2>
   <div class="spec-grid">
     <div class="spec-card reveal"><div class="spec-card-label">Controller</div><div class="spec-card-value">ESP32-WROOM-32</div><div class="spec-card-note">Dual-core 240 MHz, Wi-Fi + BLE, 520 KB SRAM</div></div>
     <div class="spec-card reveal"><div class="spec-card-label">RF Transceiver</div><div class="spec-card-value">NRF24L01+ PA/LNA</div><div class="spec-card-note">2.4 GHz ISM band, +20 dBm output, 250 kbps to 2 Mbps</div></div>
@@ -222,7 +223,7 @@ footer{padding:2rem clamp(1.5rem,4vw,3rem);border-top:1px solid var(--border);di
 </section>
 <section class="cta-section">
   <h2 class="reveal">Flash it. Scan it. Break it.</h2>
-  <p class="reveal">One firmware image. Three radios. Every 2.4 GHz protocol within reach.</p>
+  <p class="reveal">Three radios, one firmware image. Open source and MIT licensed.</p>
   <div class="cta-buttons reveal">
     <a href="https://github.com/ykrishhh/ESP32-HARNESS" class="btn-primary" target="_blank" rel="noopener">Clone & Flash</a>
     <a href="https://github.com/ykrishhh/ESP32-HARNESS/issues" class="btn-secondary" target="_blank" rel="noopener">Report Issue</a>
@@ -241,7 +242,8 @@ const observer=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){t
 document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
 const lines=[{text:'harness> scan --networks',cls:'cmd'},{text:'[OK] Scanning 2.4 GHz...',cls:'ok'},{text:'[OK] 31 networks detected',cls:'ok'},{text:'harness> capture --pcap --output sdcard',cls:'cmd'},{text:'[OK] PCAP recording started',cls:'ok'},{text:'[OK] Writing to /sd/capture_001.pcap',cls:'ok'},{text:'harness> ble --enumerate',cls:'cmd'},{text:'[OK] Found 7 BLE devices',cls:'ok'},{text:'harness> rf24 --spectrum',cls:'cmd'},{text:'[OK] Channel map: 42 active / 84 total',cls:'ok'}];
 let i=0;const tb=document.getElementById('terminal-output');
-setInterval(()=>{if(i>=lines.length)i=0;const l=lines[i++];const d=document.createElement('div');d.innerHTML=`<span class="prompt">harness&gt;</span> <span class="${l.cls}">${l.text}</span>`;tb.appendChild(d);if(tb.children.length>12)tb.removeChild(tb.children[1]);tb.scrollTop=tb.scrollHeight},2800);
+const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!prefersReduced){setInterval(()=>{if(i>=lines.length)i=0;const l=lines[i++];const d=document.createElement('div');d.innerHTML=`<span class="prompt">harness&gt;</span> <span class="${l.cls}">${l.text}</span>`;tb.appendChild(d);if(tb.children.length>12)tb.removeChild(tb.children[1]);tb.scrollTop=tb.scrollHeight},2800)}
 </script>
 </body>
 </html>
