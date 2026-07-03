@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+  <rect x="40" y="40" width="1120" height="550" rx="8" stroke="#1e1e2a" stroke-width="1"/>
+  <text x="80" y="200" font-family="monospace" font-size="72" font-weight="bold" fill="#00d4ff">ESP32</text>
+  <text x="420" y="200" font-family="monospace" font-size="72" font-weight="bold" fill="#e8e8ed">-HARNESS</text>
+  <text x="80" y="280" font-family="monospace" font-size="24" fill="#6b6b7b" letter-spacing="2">PENTESTING, AUDIT &amp; TELEMETRY FIRMWARE</text>
+  <rect x="80" y="320" width="80" height="3" rx="1" fill="#00d4ff"/>
+  <text x="80" y="380" font-family="monospace" font-size="18" fill="#6b6b7b">2.4 GHz Research | NRF24L01+ | BLE 5.0 | Forensic Capture</text>
+  <text x="80" y="440" font-family="monospace" font-size="16" fill="#28c840">github.com/ykrishhh/ESP32-HARNESS</text>
+  <text x="80" y="520" font-family="monospace" font-size="14" fill="#6b6b7b">ESP32-WROOM-32 | MIT License | Open Source</text>
+</svg>
