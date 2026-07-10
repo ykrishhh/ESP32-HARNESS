@@ -2,9 +2,9 @@
 Updated: 2026-07-10
 
 ## Session Notes
-- log: research session — new techniques documented
+- research: add binary exploitation notes
 - Firmware: stable
 - 2.4GHz scanning: operational  
 - RF24 module: connected
 
-Capture sessions: 4
+Capture sessions: 5
