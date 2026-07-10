@@ -2,9 +2,9 @@
 Updated: 2026-07-10
 
 ## Session Notes
-- research: add binary exploitation notes
+- research: mobile API security — new test cases
 - Firmware: stable
 - 2.4GHz scanning: operational  
 - RF24 module: connected
 
-Capture sessions: 5
+Capture sessions: 13
