@@ -2,9 +2,9 @@
 Updated: 2026-07-10
 
 ## Session Notes
-- achievement: new writeup draft completed
+- log: research session — new techniques documented
 - Firmware: stable
 - 2.4GHz scanning: operational  
 - RF24 module: connected
 
-Capture sessions: 15
+Capture sessions: 4
